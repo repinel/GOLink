@@ -1,16 +1,11 @@
 <project name="GOLink" default="build-jar" basedir=".">
 
-	<!-- The class files are actually put in this directory.  It is
-	a good habit to keep .class -files separate from the .java -files. -->
-
 	<property environment="env"/>
 	<property name="project.version" value="1.0"/>
 	<property name="copyright.msg" value="Repinel"/>
 	<property name="target.folder" value="${basedir}"/>
 
-	<target name="init">
-
-	</target>
+	<property name="wiki.lib.dir" value="/opt/tomcat-6/webapps/wiki/WEB-INF/lib"/>
 
 	<!-- ================== Common Targets ==================== -->
 
@@ -131,6 +126,10 @@
 			</manifest>
 			<metainf file="${taglib.definition}"/> 
 		</jar>
+
+		<copy todir="${wiki.lib.dir}" overwrite="yes">
+			<fileset dir="${basedir}" includes="*.jar"/>
+		</copy>
 
 		<echo message="build-jar done"/>
 	</target>
