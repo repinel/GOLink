@@ -32,7 +32,8 @@
 
 		<!-- Filenames -->
 		<property name="jarfile.name" value="${ant.project.name}-${project.version}.jar" />
-
+		<property name="jar.main.class" value="br.golink.GOLinkParser" />
+		
 		<!-- Timestamp -->
 		<tstamp>
 			<format property="build.time" pattern="yyyy.MM.dd HH:mm:ss" />
@@ -124,6 +125,7 @@
 				<attribute name="Application-Name" value="${ant.project.name}"/>
 				<attribute name="Application-Version" value="${project.version}"/>
 				<attribute name="Copyright" value="${copyright.msg}"/>
+				<attribute name="Main-Class"  value="${jar.main.class}"/>
 			</manifest>
 			<metainf file="${taglib.definition}"/> 
 		</jar>
