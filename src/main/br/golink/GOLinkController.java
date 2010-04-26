@@ -7,7 +7,6 @@
 package br.golink;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -34,22 +33,7 @@ public class GOLinkController
 	 */
 	public GOEntry getGOTermGivenAccession(String accession) throws GOException
 	{
-		Connection connection;
-
-		try
-		{
-			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://" + Constants.DB_HOSTNAME + "/" + Constants.DATABASE, Constants.DB_USERNAME, Constants.DB_PASSWORD);
-			connection.setAutoCommit(false);
-		}
-		catch (ClassNotFoundException e)
-		{
-			throw new GOException("JDBC error - com.mysql.jdbc.Driver", e);
-		}
-		catch (SQLException e)
-		{
-			throw new GOException("JDBC error - connection", e);
-		}
+		Connection connection = GODB.getConnection();
 
 		GOEntry goEntry = null;
 
@@ -108,22 +92,7 @@ public class GOLinkController
 	 */
 	public GOEntry getGOTermGivenEntry(String entry) throws GOException
 	{
-		Connection connection;
-
-		try
-		{
-			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://" + Constants.DB_HOSTNAME + "/" + Constants.DATABASE, Constants.DB_USERNAME, Constants.DB_PASSWORD);
-			connection.setAutoCommit(false);
-		}
-		catch (ClassNotFoundException e)
-		{
-			throw new GOException("JDBC error - com.mysql.jdbc.Driver", e);
-		}
-		catch (SQLException e)
-		{
-			throw new GOException("JDBC error - connection", e);
-		}
+		Connection connection = GODB.getConnection();
 
 		GOEntry goEntry = null;
 

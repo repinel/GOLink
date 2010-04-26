@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasources>
+
+   	<local-tx-datasource>
+		<jndi-name>GOLINK_DS</jndi-name>
+		<use-java-context>true</use-java-context>
+		<connection-url>jdbc:mysql://mysql.ebi.ac.uk:4085/go_latest</connection-url> 
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+			<user-name>go_select</user-name>
+			<password>amigo</password>
+		<exception-sorter-class-name>com.mysql.jdbc.integration.jboss.ExtendedMysqlExceptionSorter</exception-sorter-class-name>
+	</local-tx-datasource>
+
+</datasources>
