@@ -78,7 +78,7 @@ public class GOLink implements WikiPlugin
 
 		if (params.get(PARAMETER_FIELD) != null)
 		{
-			String[] fields = ((String) params.get(PARAMETER_FIELD)).substring(PARAMETER_FIELD.length() + 1).trim().split(",");
+			String[] fields = ((String) params.get(PARAMETER_FIELD)).trim().split(",");
 
 			/*
 			 * Check the possibles fields. 
