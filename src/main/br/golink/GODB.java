@@ -27,7 +27,7 @@ public class GODB
 
 			Context envContext  = (Context) initContext.lookup("java:/comp/env");
 
-			DataSource ds = (DataSource) envContext.lookup("GOLINK_DS");
+			DataSource ds = (DataSource) envContext.lookup(Constants.DATA_SOURCE);
 
 			if (ds == null)
 			{

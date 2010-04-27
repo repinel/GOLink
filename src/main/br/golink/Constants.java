@@ -46,4 +46,6 @@ public class Constants
 	public static final String DB_USERNAME = "go_select";
 	public static final String DB_PASSWORD = "amigo";
 	public static final String DATABASE    = "go_latest";
+
+	public static final String DATA_SOURCE = "jdbc/GO_LINK";
 }
