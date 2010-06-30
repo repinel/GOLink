@@ -7,7 +7,7 @@
 
 	<property name="wiki.lib.dir" value="/opt/tomcat-6/webapps/wiki/WEB-INF/lib"/>
 
-	<!-- ================== Common Targets ==================== -->
+	<!-- ================== Common Targets ====================  -->
 
 	<!-- ****************************************************** -->
 	<!-- Set Properties                                         -->
